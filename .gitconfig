@@ -1,0 +1,16 @@
+[user]
+	email = sohyongsheng@gmail.com
+	name = Soh Yong Sheng
+[core]
+	editor = vim
+[alias]
+	cho = checkout
+	br = branch
+	ci = commit
+	st = status
+	re = remote
+	unstage = reset HEAD --
+	last = log -1
+	lg = log --oneline 
+	ls = log --oneline --graph --all
+	li = log --oneline --graph --all --simplify-by-decoration
