@@ -1,0 +1,18 @@
+[submodule ".vim/pack/sohyongsheng/start/vim-commentary"]
+	path = .vim/pack/sohyongsheng/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/pack/sohyongsheng/start/vim-dirvish"]
+	path = .vim/pack/sohyongsheng/start/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish.git
+[submodule ".vim/pack/sohyongsheng/start/vim-indent-object"]
+	path = .vim/pack/sohyongsheng/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+[submodule ".vim/pack/sohyongsheng/start/vim-repeat"]
+	path = .vim/pack/sohyongsheng/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule ".vim/pack/sohyongsheng/start/vim-surround"]
+	path = .vim/pack/sohyongsheng/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/sohyongsheng/start/vim-unimpaired"]
+	path = .vim/pack/sohyongsheng/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
