@@ -16,3 +16,6 @@
 [submodule ".vim/pack/sohyongsheng/start/vim-unimpaired"]
 	path = .vim/pack/sohyongsheng/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
