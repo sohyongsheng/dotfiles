@@ -21,6 +21,8 @@ alias dol='docker login harbor.ste.k8s'
 alias deh='feh --geometry 960x720 --scale-down --auto-zoom'
 alias con='git --git-dir ${HOME}/.config.git/ --work-tree ${HOME}'
 alias ght='ssh -T git@github.com'
+alias l.='ls -d .[!.]*'
+alias r.='rm -rfI .[!.]*'
 
 json () {
     # Input is piped in.
