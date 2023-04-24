@@ -5,6 +5,7 @@
 	editor = vim
 [alias]
 	cho = checkout
+    sw = switch
 	br = branch
 	ci = commit
 	st = status
