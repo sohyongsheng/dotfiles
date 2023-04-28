@@ -1,7 +1,7 @@
 alias kopi='perl -pe "chomp if eof" | xsel --input --clipboard'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias path='echo "${PATH}" | tr ":" "\n"'
-alias ve='python3 -m venv env'
+alias ve='python -m venv env'
 alias va='source env/bin/activate'
 alias wp='which python'
 alias pu='python -m pip install --upgrade pip setuptools wheel'
