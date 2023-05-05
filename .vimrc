@@ -82,3 +82,12 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType dirvish nnoremap <silent><buffer> l :<C-U>.call dirvish#open("edit", 0)<CR>
 autocmd FileType dirvish nnoremap <silent><buffer> h :<C-U>exe "Dirvish %:h".repeat(":h",v:count1)<CR>
 
+" Copy current file name/path.
+" relative path (src/foo.txt)
+nnoremap <leader>cf :let @+=expand("%")<CR>
+" absolute path (/something/src/foo.txt)
+nnoremap <leader>cF :let @+=expand("%:p")<CR>
+" filename (foo.txt)
+nnoremap <leader>ct :let @+=expand("%:t")<CR>
+" directory name (/something/src)
+nnoremap <leader>ch :let @+=expand("%:p:h")<CR>
