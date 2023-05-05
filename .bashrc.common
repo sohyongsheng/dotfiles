@@ -1,0 +1,6 @@
+# Prevent CTRL-s from freezing screen and allow forward search.
+if [[ -t 0 && $- = *i* ]]
+then
+    stty -ixon
+fi 
+
