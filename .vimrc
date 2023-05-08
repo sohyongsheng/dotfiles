@@ -73,12 +73,13 @@ let g:netrw_liststyle = 3
 
 " Snippets.
 nnoremap <leader>b obreakpoint()<Esc>
+nnoremap <leader>t o#TODO<Esc>
 nnoremap <leader><Space> :nohlsearch<CR>
 
 " File-type specific commands.
 " Use double slashes '//' for commenting in C++.
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
-autocmd FileType yaml,markdown setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml,markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType dirvish nnoremap <silent><buffer> l :<C-U>.call dirvish#open("edit", 0)<CR>
 autocmd FileType dirvish nnoremap <silent><buffer> h :<C-U>exe "Dirvish %:h".repeat(":h",v:count1)<CR>
 
