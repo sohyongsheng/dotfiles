@@ -85,10 +85,10 @@ autocmd FileType dirvish nnoremap <silent><buffer> h :<C-U>exe "Dirvish %:h".rep
 
 " Copy current file name/path.
 " relative path (src/foo.txt)
-nnoremap <leader>cf :let @+=expand("%")<CR>
+nnoremap <leader>cop :let @+=expand("%")<CR>
 " absolute path (/something/src/foo.txt)
-nnoremap <leader>cF :let @+=expand("%:p")<CR>
+nnoremap <leader>coP :let @+=expand("%:p")<CR>
 " filename (foo.txt)
-nnoremap <leader>ct :let @+=expand("%:t")<CR>
+nnoremap <leader>con :let @+=expand("%:t")<CR>
 " directory name (/something/src)
-nnoremap <leader>ch :let @+=expand("%:p:h")<CR>
+nnoremap <leader>cod :let @+=expand("%:p:h")<CR>
