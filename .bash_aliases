@@ -23,6 +23,7 @@ alias dof='git --git-dir ${HOME}/.config/dotfiles.git/ --work-tree ${HOME}'
 alias ght='ssh -T git@github.com'
 alias l.='ls -d .[!.]*'
 alias r.='rm -rfI .[!.]*'
+alias todo='grep  --recursive --include "*.py" "TODO"'
 
 json () {
     # Input is piped in.
