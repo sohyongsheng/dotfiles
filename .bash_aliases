@@ -25,6 +25,12 @@ alias l.='ls -d .[!.]*'
 alias r.='rm -rfI .[!.]*'
 alias todo='grep  --recursive --include "*.py" "TODO"'
 
+vpn_profile='~/.config/vpn/220902_STE-SELETAR-VPN_config.conf'
+alias vpn='openvpn3 sessions-list'
+alias vpc="openvpn3 session-start --config ${vpn_profile}"
+alias vpd="openvpn3 session-manage --config ${vpn_profile} --disconnect"
+alias vpdp='openvpn3 session-manage --disconnect --path'
+
 json () {
     # Input is piped in.
     if [[ -z $1 ]]; then
