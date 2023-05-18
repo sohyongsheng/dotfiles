@@ -24,20 +24,34 @@ alias ght='ssh -T git@github.com'
 alias l.='ls -d .[!.]*'
 alias r.='rm -rfI .[!.]*'
 alias todo='grep  --recursive --include "*.py" "TODO"'
-
-vpn_profile='~/.config/vpn/220902_STE-SELETAR-VPN_config.conf'
 alias vpn='openvpn3 sessions-list'
-alias vpc="openvpn3 session-start --config ${vpn_profile}"
-alias vpd="openvpn3 session-manage --config ${vpn_profile} --disconnect"
-alias vpdp='openvpn3 session-manage --disconnect --path'
 
-json () {
+vpc() {
+    if [[ -z ${1} ]]; then
+        config_file="${HOME}/.config/vpn/220902_STE-SELETAR-VPN_config.conf"
+    else
+        config_file=${1}
+    fi
+    openvpn3 session-start --config ${config_file}
+}
+
+vpd() {
+    if [[ -z ${1} ]]; then
+        config_name="${HOME}/.config/vpn/220902_STE-SELETAR-VPN_config.conf"
+        openvpn3 session-manage --disconnect --config ${config_name}
+    else
+        session_path=${1}
+        openvpn3 session-manage --disconnect --session-path ${session_path}
+    fi
+}
+
+json() {
     # Input is piped in.
-    if [[ -z $1 ]]; then
+    if [[ -z ${1} ]]; then
         python -m json.tool | pygmentize -l json -O 'style = monokai'
     # Input comes from a file.
     else
-        python -m json.tool $1 | pygmentize -l json -O  'style = monokai'
+        python -m json.tool ${1} | pygmentize -l json -O  'style = monokai'
     fi
 }
 
