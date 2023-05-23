@@ -12,5 +12,7 @@
 	lg = log --oneline 
 	ls = log --oneline --graph --all
 	li = log --oneline --graph --all --simplify-by-decoration
+    top = rev-parse --show-toplevel
+
 [core]
 	excludesfile = /home/sohyongsheng/.gitignore_global

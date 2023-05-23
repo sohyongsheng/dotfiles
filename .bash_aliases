@@ -2,7 +2,7 @@ alias kopi='perl -pe "chomp if eof" | xsel --clipboard'
 alias xb='xsel --clipboard'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias path='echo "${PATH}" | tr ":" "\n"'
-alias ve='python -m venv env'
+alias ve='python -m venv --upgrade-deps env'
 alias va='source env/bin/activate'
 alias wp='which python'
 alias pu='python -m pip install --upgrade pip setuptools wheel'
@@ -53,5 +53,18 @@ json() {
     else
         python -m json.tool ${1} | pygmentize -l json -O  'style = monokai'
     fi
+}
+
+# Check largest files in a Git repo.
+gila() {
+    git rev-list --objects --all \
+    | git cat-file \
+        --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
+    | sed -n 's/^blob //p' \
+    | sort --numeric-sort --key=2 --reverse \
+    | cut -c 1-12,41- \
+    | $(command -v gnumfmt || echo numfmt) \
+        --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest \
+    ;
 }
 
