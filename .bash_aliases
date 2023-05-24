@@ -25,6 +25,8 @@ alias l.='ls -d .[!.]*'
 alias r.='rm -rfI .[!.]*'
 alias todo='grep  --recursive --include "*.py" "TODO"'
 alias vpn='openvpn3 sessions-list'
+alias wget='wget --content-disposition'
+
 
 vpc() {
     if [[ -z ${1} ]]; then
