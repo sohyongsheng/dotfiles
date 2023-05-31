@@ -4,6 +4,3 @@ then
     stty -ixon
 fi 
 
-# Binaries put under home directory.
-export PATH="${PATH}:${HOME}/bin"
-
