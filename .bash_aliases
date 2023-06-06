@@ -27,6 +27,7 @@ alias todo='grep  --recursive --include "*.py" "TODO"'
 alias vpn='openvpn3 sessions-list'
 alias jpg='mogrify -format jpg'
 alias wget='wget --content-disposition'
+alias sshfs='sshfs -o reconnect'
 
 vpc() {
     if [[ -z ${1} ]]; then
