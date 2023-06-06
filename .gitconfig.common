@@ -12,6 +12,7 @@
 	lg = log --oneline 
 	ls = log --oneline --graph --all
 	li = log --oneline --graph --all --simplify-by-decoration
+	lo = log --oneline --graph --simplify-by-decoration
     top = rev-parse --show-toplevel
 
 [core]
