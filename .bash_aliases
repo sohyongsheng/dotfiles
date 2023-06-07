@@ -28,7 +28,9 @@ alias vpn='openvpn3 sessions-list'
 alias jpg='mogrify -format jpg'
 alias wget='wget --content-disposition'
 alias lesh='less --chop-long-lines +g'
-alias sshfs='sshfs -o reconnect'
+alias mp='mountpoint'
+alias sshfs='sshfs -o ServerAliveInterval=15,ServerAliveCountMax=3'
+alias sshfu='fusermount -u'
 
 vpc() {
     if [[ -z ${1} ]]; then
