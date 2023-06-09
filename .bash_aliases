@@ -29,7 +29,6 @@ alias jpg='mogrify -format jpg'
 alias wget='wget --content-disposition'
 alias lesh='less --chop-long-lines +g'
 alias mp='mountpoint'
-alias sshfs='sshfs -o ServerAliveInterval=15,ServerAliveCountMax=3'
 alias sshfu='fusermount -u'
 
 vpc() {
