@@ -1,6 +1,6 @@
 alias kopi='perl -pe "chomp if eof" | xsel --clipboard'
 alias xb='xsel --clipboard'
-alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias bat='upower --show-info /org/freedesktop/UPower/devices/battery_BAT0'
 alias path='echo "${PATH}" | tr ":" "\n"'
 alias ve='python -m venv env'
 alias va='source env/bin/activate'
