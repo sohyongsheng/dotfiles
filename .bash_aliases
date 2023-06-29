@@ -13,6 +13,7 @@ alias pv='python --version'
 alias vd='deactivate'
 alias lv='ls -v'
 alias lt='ls -halt'
+alias lat='ls -t | head'
 alias open='xdg-open &> /dev/null'
 alias tmux='tmux -2'
 alias smi='watch nvidia-smi'
@@ -53,10 +54,14 @@ vpd() {
 json() {
     # Input is piped in.
     if [[ -z "${1}" ]]; then
-        python -m json.tool | pygmentize -l json -O 'style = monokai'
+        python -m json.tool \
+            | pygmentize -l json -O 'style = monokai' \
+            | less --RAW-CONTROL-CHARS
     # Input comes from a file.
     else
-        python -m json.tool "${1}" | pygmentize -l json -O  'style = monokai'
+        python -m json.tool "${1}" \
+            | pygmentize -l json -O  'style = monokai' \
+            | less --RAW-CONTROL-CHARS
     fi
 }
 

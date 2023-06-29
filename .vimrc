@@ -79,6 +79,7 @@ nnoremap <leader><Space> :nohlsearch<CR>
 " File-type specific commands.
 " Use double slashes '//' for commenting in C++.
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+autocmd FileType text setlocal commentstring=#\ %s
 autocmd FileType yaml,markdown setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType dirvish nnoremap <silent><buffer> l :<C-U>.call dirvish#open("edit", 0)<CR>
 autocmd FileType dirvish nnoremap <silent><buffer> h :<C-U>exe "Dirvish %:h".repeat(":h",v:count1)<CR>
@@ -92,3 +93,4 @@ nnoremap <leader>coP :let @+=expand("%:p")<CR>
 nnoremap <leader>con :let @+=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>cod :let @+=expand("%:p:h")<CR>
+
