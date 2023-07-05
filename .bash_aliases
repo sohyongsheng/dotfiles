@@ -31,6 +31,7 @@ alias wget='wget --content-disposition'
 alias lesh='less --chop-long-lines +g'
 alias mp='mountpoint'
 alias sshfu='fusermount -u'
+alias sshnf='ssh -o ClearAllForwardings=yes'
 
 vpc() {
     if [[ -z "${1}" ]]; then
