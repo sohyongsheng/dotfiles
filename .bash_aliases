@@ -33,6 +33,8 @@ alias lesh='less --chop-long-lines +g'
 alias mp='mountpoint'
 alias sshfu='fusermount -u'
 alias sshnf='ssh -o ClearAllForwardings=yes'
+alias sin='[[ $- == *i* ]] && echo "Interactive shell." || echo "Not interactive."'
+alias slo='shopt -q login_shell && echo "Login shell." || echo "Not login shell."'
 
 vpc() {
     if [[ -z "${1}" ]]; then
