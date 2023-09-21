@@ -42,6 +42,26 @@ otherwise tpm (Tmux Plugin Manager) would complain.
 
     dof submodule foreach 'git checkout master || git checkout main'
 
+Check if vim has clipboard support by running
+
+    vim --version | grep xterm_clipboard
+
+If you see a `+xterm_clipboard` (`+` in front of `xterm_clipboard`) ,
+you are good to go. Otherwise, if you see a `-` in front of
+`xterm_clipboard`, you may install vim-gtk, because it has clipboard
+support.
+
+    sudo apt install vim-gtk
+
+Generate helptags for vim plugins.
+
+1. Start vim.
+2. Run `:helptags ALL`.
+
+Install git-extras for handy commands like `git alias`.
+
+    sudo apt install git-extras 
+
 Include common config options in
 
 - `.gitconfig` from `.gitconfig.common`
@@ -52,6 +72,8 @@ Include common config options in
       [include]
           path = .gitconfig.common
 
+  Run `git alias`. The aliases in `.gitconfig.common` should be listed.
+
 - `.bashrc` from `.bashrc.common`
 
       # Other settings that we want to apply commonly to all our .bashrc
@@ -59,6 +81,9 @@ Include common config options in
       if [ -f ~/.bashrc.common ]; then
           . ~/.bashrc.common
       fi
+
+  Type <kbd>Ctrl</kbd> + <kbd>s</kbd>. This should initiate a forward
+  search instead of freezing the terminal.
 
 If needed, configure user email locally for this repo.
 
@@ -74,18 +99,4 @@ Install tmux plugins.
 1. Start a tmux session.
 2. Press <kbd>prefix</kbd> + <kbd>I</kbd> (capital I).
 
-Install vim-gtk, because it has clipboard support.
-
-    sudo apt install vim-gtk
-
-To check for clipboard support, run
-
-    vim --version
-
-If you see `+xterm_clipboard`, you are good to go.
-
-Generate helptags for vim plugins.
-
-1. Start vim.
-2. Run `:helptags ALL`.
 
