@@ -64,7 +64,9 @@ Install git-extras for handy commands like `git alias`.
 
 Include common config options in
 
-- `.gitconfig` from `.gitconfig.common`
+- `.gitconfig` from `.gitconfig.common`. Replace {name@email.com} and
+  {Your Name} as appropriate; normally this email address is your
+  company email address.
 
       [user]
           email = {name@email.com}
