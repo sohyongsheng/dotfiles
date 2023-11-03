@@ -36,6 +36,7 @@ alias sshfu='fusermount -u'
 alias sshnf='ssh -o ClearAllForwardings=yes'
 alias sin='[[ $- == *i* ]] && echo "Interactive shell." || echo "Not interactive."'
 alias slo='shopt -q login_shell && echo "Login shell." || echo "Not login shell."'
+alias dfh='df --human-readable | grep --invert-match /snap'
 
 vpc() {
     if [[ -z "${1}" ]]; then
