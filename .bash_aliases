@@ -41,6 +41,7 @@ alias slo='shopt -q login_shell && echo "Login shell." || echo "Not login shell.
 alias dfh='df --human-readable | grep --invert-match /snap'
 alias pig='cat ${HOME}/.config/gitignore/Python.gitignore >> .gitignore'
 alias disp='echo ${DISPLAY}'
+alias nv='cat /proc/driver/nvidia/version'
 
 vpc() {
     if [[ -z "${1}" ]]; then
