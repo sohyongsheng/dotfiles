@@ -42,6 +42,7 @@ alias dfh='df --human-readable | grep --invert-match /snap'
 alias pig='cat ${HOME}/.config/gitignore/Python.gitignore >> .gitignore'
 alias disp='echo ${DISPLAY}'
 alias nv='cat /proc/driver/nvidia/version'
+alias dupa='echo "${PATH}" | tr ":" "\n" | sort | uniq -D'
 
 vpc() {
     if [[ -z "${1}" ]]; then
@@ -87,5 +88,14 @@ gila() {
     | $(command -v gnumfmt || echo numfmt) \
         --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest \
     ;
+}
+
+# Add directory to path only if it's not in path.
+# Solution copied from:
+# https://superuser.com/a/39995
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
 }
 
