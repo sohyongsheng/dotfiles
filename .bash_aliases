@@ -43,6 +43,9 @@ alias pig='cat ${HOME}/.config/gitignore/Python.gitignore >> .gitignore'
 alias disp='echo ${DISPLAY}'
 alias nv='cat /proc/driver/nvidia/version'
 alias dupa='echo "${PATH}" | tr ":" "\n" | sort | uniq -D'
+# To fix "missing or unsuitable terminal: alacritty" error when SSHing.
+# https://github.com/alacritty/alacritty/issues/3633
+alias ssh='TERM="xterm-256color" ssh'
 
 vpc() {
     if [[ -z "${1}" ]]; then
