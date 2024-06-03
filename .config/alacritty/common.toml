@@ -2,3 +2,6 @@
   normal.family = "Inconsolata"
   size = 13
 
+[cursor]
+  style.blinking = "Always"
+
