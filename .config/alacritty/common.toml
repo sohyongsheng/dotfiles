@@ -5,3 +5,6 @@
 [cursor]
   style.blinking = "Always"
 
+[window]
+  startup_mode = "Maximized"
+
