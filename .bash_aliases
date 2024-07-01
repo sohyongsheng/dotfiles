@@ -47,6 +47,7 @@ alias dupa='echo "${PATH}" | tr ":" "\n" | sort | uniq -D'
 # To fix "missing or unsuitable terminal: alacritty" error when SSHing.
 # https://github.com/alacritty/alacritty/issues/3633
 alias ssh='TERM="xterm-256color" ssh'
+alias bfg='java -jar ${HOME}/bfg.jar'
 
 vpc() {
     if [[ -z "${1}" ]]; then
