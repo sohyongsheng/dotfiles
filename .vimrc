@@ -64,7 +64,7 @@ inoremap jk <Esc>
 " List all available tag matches.
 nnoremap <C-]> g<C-]> 
 " Run ctags to generate tags file.
-command! Maketags !ctags --excmd=pattern --recurse --exclude="env"
+command! Maketags !ctags --excmd=pattern --recurse --exclude="env"  --exclude=".venv"
 
 " Disable banner.
 let g:netrw_banner = 0
