@@ -105,3 +105,8 @@ pathadd() {
     fi
 }
 
+# Display colored output of tree in less.
+ctree() {
+    tree -C ${1} | less --RAW-CONTROL-CHARS
+}
+
