@@ -94,3 +94,7 @@ nnoremap <leader>con :let @+=expand("%:t")<CR>
 " Directory name (/something/src)
 nnoremap <leader>cod :let @+=expand("%:p:h")<CR>
 
+" Windsurf-related config. See following for more details:
+" https://github.com/Exafunction/windsurf.vim
+" Disable Windsurf. 
+let g:codeium_enabled = v:false
