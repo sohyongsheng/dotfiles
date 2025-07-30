@@ -1,7 +1,7 @@
 Installing
 ==========
 
-Clone this repo to a bare repo called `.config.git`. This contains all
+Clone this repo to a bare repo called `dotfiles.git`. This contains all
 the files that Git needs for its internal operation. By convention, the
 bare repo ends with a `.git` extension.
 
@@ -64,8 +64,8 @@ Install git-extras for handy commands like `git alias`.
 
 Include common config options in
 
-- `.gitconfig` from `.gitconfig.common`. Replace {name@email.com} and
-  {Your Name} as appropriate; normally this email address is your
+- `.gitconfig` from `.gitconfig.common`. Replace `{name@email.com}` and
+  `{Your Name}` as appropriate; normally this email address is your
   company email address.
 
       [user]
