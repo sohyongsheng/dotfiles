@@ -99,7 +99,8 @@ it.
 Install tmux plugins.
 
 1. Start a tmux session.
-2. Press <kbd>prefix</kbd> + <kbd>I</kbd> (capital I).
+2. Press <kbd>prefix</kbd> + <kbd>I</kbd> (capital I). Wait for a while
+   for the success message to appear.
 
 Install pyenv
 
