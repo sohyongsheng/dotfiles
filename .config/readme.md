@@ -1,5 +1,8 @@
+Dotfiles
+========
+
 Installing
-==========
+----------
 
 Clone this repo to a bare repo called `dotfiles.git`. This contains all
 the files that Git needs for its internal operation. By convention, the
@@ -132,4 +135,14 @@ Install pyenv
       echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
       echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
       echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+Updating
+--------
+
+To update the Git submodules, run
+
+    dof submodule foreach git pull
+
+TODO: Study Git submodules tutorial to see if the above command is the
+best way to pull updates from submodules.
 
