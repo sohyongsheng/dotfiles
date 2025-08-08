@@ -87,8 +87,9 @@ Include common config options in
           . ~/.bashrc.common
       fi
 
-  Type <kbd>Ctrl</kbd> + <kbd>s</kbd>. This should initiate a forward
-  search instead of freezing the terminal.
+  Restart your terminal to reload the `.bashrc` file. Then type
+  <kbd>Ctrl</kbd> + <kbd>s</kbd>. This should initiate a forward search
+  instead of freezing the terminal.
 
 If needed, configure user email locally for this repo.
 
@@ -99,7 +100,11 @@ it.
 
     sudo apt install xsel
 
-Install tmux plugins.
+Install tmux.
+
+    sudo apt install tmux
+
+Then install tmux plugins.
 
 1. Start a tmux session.
 2. Press <kbd>prefix</kbd> + <kbd>I</kbd> (capital I). Wait for a while
