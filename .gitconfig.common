@@ -16,3 +16,9 @@
     lo = log --oneline --graph --simplify-by-decoration
     top = rev-parse --show-toplevel
 
+[diff]
+    tool = vimdiff
+
+[merge]
+    tool = vimdiff
+
