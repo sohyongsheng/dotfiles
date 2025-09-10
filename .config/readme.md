@@ -61,6 +61,10 @@ Generate helptags for vim plugins.
 1. Start vim.
 2. Run `:helptags ALL`.
 
+Install Universal Ctags.
+    
+    sudo apt install universal-ctags
+
 Install git-extras for handy commands like `git alias`.
 
     sudo apt install git-extras 
